@@ -1,5 +1,3 @@
----
-
 CropTrendX: Agricultural Commodity Price Forecasting
 
 A multivariate machine learning system for predicting agricultural commodity prices using Random Forest, XGBoost, and LSTM.
