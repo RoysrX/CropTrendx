@@ -1,142 +1,133 @@
-CropTrendX: Agricultural Commodity Price Forecasting
+# 🌾 CropTrendX: Agricultural Commodity Price Forecasting
 
-A multivariate machine learning system for predicting agricultural commodity prices using Random Forest, XGBoost, and LSTM.
-
-Overview
-
-CropTrendX is a predictive analytics system designed to forecast short-term price movements of agricultural commodities such as pulses and vegetables. The model integrates real-time market factors, multi-state datasets, and advanced machine learning techniques to support decision-making for farmers, traders, cold storage owners, and policymakers.
-
-Price volatility in agriculture often arises from unstable supply–demand patterns, inflation effects, fuel price changes, and regional stock variations. CropTrendX addresses these challenges by using both statistical and deep learning models that capture linear trends, non-linear behavior, and long-term temporal dependencies.
-
+CropTrendX is a multivariate machine learning system for forecasting short-term agricultural commodity prices using Random Forest, XGBoost, and LSTM models. The system focuses on predicting modal prices of agricultural commodities such as pulses and vegetables by integrating regional market data and real-world economic factors.
 
 ---
 
-Key Features
+## 📌 Overview
 
-Multivariate Time-Series Forecasting targeting modal price trends.
+Agricultural commodity prices are highly volatile due to unstable supply–demand patterns, inflation, fuel price fluctuations, and regional stock variations. CropTrendX addresses these challenges through a hybrid predictive framework combining statistical learning and deep learning models to capture:
 
-Hybrid Modeling: Random Forest, XGBoost, and LSTM for comprehensive linear, non-linear, and sequential pattern learning.
+- Linear price trends  
+- Non-linear market behavior  
+- Long-term temporal dependencies  
 
-Real-Time Factors: Incorporates inflation, fuel prices, supply metrics, and demand–supply indicators.
-
-Regional Adaptability: Dataset aggregated from multiple Indian states for region-specific forecasting.
-
-Feature Engineering: Categorical embeddings, seasonal sin–cos transforms, and lag-based variables.
-
-Decision-Support System: Provides actionable insights for market stability and risk reduction.
-
-
+The system acts as a decision-support tool for farmers, traders, cold storage owners, and policymakers.
 
 ---
 
-Dataset
+## 🚀 Key Features
 
-Source: data.gov.in
+- **Multivariate Time-Series Forecasting**  
+  Predicts modal price trends using historical and engineered features.
 
-Time Range: January 2022 to Present
+- **Hybrid Modeling Framework**  
+  - Random Forest for baseline linear and non-linear learning  
+  - XGBoost for boosted non-linear modeling  
+  - LSTM for deep sequential temporal prediction  
 
-States Covered: West Bengal, Jharkhand, Bihar, Assam, Meghalaya, Odisha, and others
+- **Real-Time Economic Factors**  
+  Incorporates inflation indicators, fuel prices, and supply–demand metrics.
 
-Key Attributes:
+- **Regional Adaptability**  
+  Uses multi-state datasets to enable region-specific forecasting.
 
-Categorical: state, district, market, variety
+- **Advanced Feature Engineering**  
+  - Categorical embeddings  
+  - Seasonal sin–cos transformations  
+  - Lag-based time features  
 
-Numerical: min price, max price, modal price
-
-Engineered: lag features (1-day, 10-day), seasonal encodings (sin/cos of month)
-
-
-Primary Target Variable: Modal Price
-
-
-
----
-
-Model Pipeline
-
-1. Data Preprocessing
-
-Label Encoding and Binary Encoding for categorical fields
-
-Min-Max scaling for numerical fields
-
-Lag creation for time-dependent modeling
-
-Seasonal feature extraction using sin–cos transforms
-
-Sequence generation for LSTM inputs
-
-
-
-2. Models Used
-
-Random Forest for linear + non-linear baseline modeling
-
-XGBoost for boosted non-linear learning
-
-LSTM for deep temporal sequence prediction
-
-
-
-3. Evaluation Metrics
-
-MAE (Mean Absolute Error)
-
-RMSE (Root Mean Square Error)
-
-MAPE (Mean Absolute Percentage Error)
-
-
-
-
+- **Decision-Support System**  
+  Provides actionable insights to reduce risk and stabilize markets.
 
 ---
 
-Experimental Results
+## 📊 Dataset
 
-LSTM outperformed all models, providing the lowest MAE, RMSE, and MAPE across commodities.
+- **Source:** data.gov.in  
+- **Time Range:** January 2022 – Present  
+- **States Covered:**  
+  West Bengal, Jharkhand, Bihar, Assam, Meghalaya, Odisha, and others  
 
-XGBoost performed better than Random Forest but remained less accurate than LSTM.
+### Key Attributes
 
-The results demonstrate that deep learning handles temporal agricultural price data more effectively than traditional ensemble models.
+**Categorical Features**
+- State  
+- District  
+- Market  
+- Variety  
 
+**Numerical Features**
+- Minimum Price  
+- Maximum Price  
+- Modal Price  
 
+**Engineered Features**
+- Lag features (1-day, 10-day)  
+- Seasonal encodings (sin/cos of month)  
 
----
-
-Use Cases
-
-Farmers: Plan crop sales and storage decisions.
-
-Cold Storage Owners: Optimize release of stock based on predicted price movements.
-
-Traders & Suppliers: Reduce risk by anticipating short-term price volatility.
-
-Policymakers: Improve market regulation and inflation control.
-
-
----
-
-Future Enhancements
-
-Integration with live price APIs
-
-Inclusion of weather and satellite data
-
-Deployment as a web dashboard (Flask/React)
-
-Support for additional crops and markets
-
-
+**Target Variable:** Modal Price
 
 ---
 
-Contributors
+## 🧠 Model Pipeline
 
-Research Team, Institute of Engineering & Management (IEM)
+### 1️⃣ Data Preprocessing
 
-Project mentors and faculty collaborators
+- Label Encoding and Binary Encoding for categorical variables  
+- Min-Max scaling for numerical features  
+- Lag feature generation for time-series dependency  
+- Seasonal feature extraction using sin–cos transforms  
+- Sequence generation for LSTM inputs  
 
+### 2️⃣ Models Used
 
+- **Random Forest:** Baseline regression with non-linear capability  
+- **XGBoost:** Gradient-boosted tree-based regression model  
+- **LSTM:** Deep learning model for temporal sequence forecasting  
+
+### 3️⃣ Evaluation Metrics
+
+- MAE (Mean Absolute Error)  
+- RMSE (Root Mean Square Error)  
+- MAPE (Mean Absolute Percentage Error)  
 
 ---
+
+## 📈 Experimental Results
+
+- LSTM achieved the lowest MAE, RMSE, and MAPE across all commodities.  
+- XGBoost performed better than Random Forest but was less accurate than LSTM.  
+- Results demonstrate that deep learning models handle agricultural time-series data more effectively than traditional ensemble models.
+
+---
+
+## 🧑‍🌾 Use Cases
+
+- **Farmers:** Plan crop sales and storage decisions  
+- **Cold Storage Owners:** Optimize stock release timing  
+- **Traders & Suppliers:** Anticipate short-term price volatility  
+- **Policymakers:** Support market regulation and inflation control  
+
+---
+
+## 🔮 Future Enhancements
+
+- Integration with live market price APIs  
+- Inclusion of weather and satellite data  
+- Deployment as a web dashboard using Flask and React  
+- Support for additional crops and markets  
+
+---
+
+## 👥 Contributors
+
+- Research Team, Institute of Engineering & Management (IEM)  
+- Project mentors and faculty collaborators  
+
+---
+
+## 📜 License
+
+This project is intended for academic and research purposes.  
+License details can be added as required.
