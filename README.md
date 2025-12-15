@@ -124,10 +124,3 @@ The system acts as a decision-support tool for farmers, traders, cold storage ow
 
 - Research Team, Institute of Engineering & Management (IEM)  
 - Project mentors and faculty collaborators  
-
----
-
-## 📜 License
-
-This project is intended for academic and research purposes.  
-License details can be added as required.
